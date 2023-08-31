@@ -1,0 +1,145 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  background: $dark;
+  color: $white;
+  font-size: $fs+px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: $ff;
+  -webkit-tap-highlight-color: transparent;
+  /* overflow-x: hidden; */
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+
+a img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+a span,
+a font {
+  cursor: inherit;
+}
+
+hr {
+  background: $white;
+  height: 0.15rem;
+  border: 0;
+  margin: 1rem 0;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  color: inherit;
+  outline: 0;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+script {
+  display: none !important;
+}
+
+::selection {
+  color: $white;
+  background: transparentize($purple, 0.35);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// titles
+h1,
+.h1{
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+h2,
+.h2{
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+h3,
+.h3{
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+h4,
+.h4{
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.214;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+h5,
+.h5{
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: 0em;
+  margin: 0;
+}

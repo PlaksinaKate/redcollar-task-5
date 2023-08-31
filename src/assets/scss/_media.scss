@@ -1,0 +1,96 @@
+body{
+	min-width: 320px;
+	max-width: 100vw;
+}
+
+.hide-mobile{display: block;}
+.hide-desktop{display: none;}
+
+.hide{display: none;}
+
+@include media( 'ml' ){
+	.hide-desktop{display: block;}
+	.hide-mobile{display: none;}
+}
+
+
+@include media( 'tl' ){
+	.show-tl{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-tl{display: none;}
+}
+
+@include media( 'tm' ){
+	.show-tm{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-tm{display: none;}
+}
+
+@include media( 'ts' ){
+	.show-ts{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-ts{display: none;}
+	.hide-desktop{display: block;}
+
+}
+
+@include media( 'ml' ){
+	.show-ml{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-ml{display: none;}
+}
+
+@include media( 'mm' ){
+	.show-mm{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-mm{display: none;}
+}
+
+@include media( 'ms' ){
+	.show-ms{
+		display: block;
+		&.g-button{
+			display: inline-block;
+		}
+	}
+	.hide-ms{display: none;}
+}
+
+/* Desctop XXL */
+//@media screen and ( min-width: $media_desktop_l ){
+//
+//	html, body{font-size: $fs+px;}
+//
+//}
+
+
+//@media screen and ( max-width: $media_desktop_l ){html, body{font-size: $fs+px;}}
+//@media screen and ( max-width: $media_desktop_m ){html, body{font-size: $fs+px;}}
+//@media screen and ( max-width: $media_desktop_s ){html, body{font-size: $fs+px;}}
+//
+//@media screen and ( max-width: $media_tablet_l ){html, body{font-size: $fs+px;}}
+//@media screen and ( max-width: $media_tablet_m ){html, body{font-size: $fs+px;}}
+//
+//@media screen and ( max-width: $media_mobile_l ){html, body{font-size: $fs+px;}}
+//@media screen and ( max-width: $media_mobile_m ){html, body{font-size: $fs+px;}}
+//@media screen and ( max-width: $media_mobile_s ){html, body{font-size: $fs+px;}}

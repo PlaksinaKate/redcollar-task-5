@@ -1,0 +1,54 @@
+/* FONTS */
+
+  /* font family */
+  $ff:  'Ubuntu', 'monospace', sans-serif;
+
+  $fs: 18;  // font size
+  $lh: 2.4; // line height
+
+/* END FONTS */
+
+/* GRID */
+
+  $space:     8;                      // spacing grid
+  $grid_pad:  15;                     // padding column
+  $wr_pad:    20;                     // wrapper padding
+  $big_pad:   8.43;                   // big padding
+  $page_wr:   1680 + ($wr_pad*2);    // max-width content
+
+  /* media */
+  $media: (
+
+    desktop_l:  2560,   // desktop long
+    desktop_m:  1920,   // desktop middle
+    desktop_s:  1500,   // desktop small
+
+    tablet_l:   1280,   // tablet long
+    tablet_m:   1024,   // tablet middle
+    tablet_s:   900,    //tablet small
+
+    mobile_l:   768,    // mobile long
+    mobile_m:   475,    // mobile middle
+    mobile_s:   375,    // mobile small
+    mobile_xs:  320,    // mobile extra small (not used)
+
+  );
+
+/* END GRID */
+
+/* COLOR */
+  $dark:              #191919;
+  $black:             #000;
+  $white:             #FFF;
+  $purple:            #D082FF;
+
+/* END COLOR */
+
+
+/* ANIMATE */
+
+  $as: 0.45s;     // animation speed
+  $ar: $as*50;    // animation rotation
+  $ae: ease-out;  // animation easing
+
+/* END ANIMATE */

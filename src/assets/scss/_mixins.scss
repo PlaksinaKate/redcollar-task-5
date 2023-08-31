@@ -1,0 +1,59 @@
+@use 'sass:math';
+@use "sass:map";
+@use "sass:string";
+
+//Mixins Library
+
+// media
+
+@mixin media($size, $debug: false) {
+
+	$media_short: ();
+
+	@each $name,
+	$value in $media {
+		$media_short_name: string.slice($name, 1, 1)+string.slice($name, -1, -1);
+		$media_short: map.set($media_short, $media_short_name, $value );
+	}
+
+	@if $debug {
+		@debug "Допустимо";
+		@debug $media;
+		@debug "или";
+		@debug $media_short;
+		@debug "Получено - "+$size;
+	}
+
+	$media_sizes: map.get($media, $size );
+	$short_name: string.slice($size, 1, 1) + string.slice($size, -1, -1);
+
+	@if $debug {
+		@debug $short_name;
+		@debug $media_sizes;
+	}
+
+	@if ($media_sizes or map.get($media_short, $size )) {
+
+		@if $debug {
+			@debug "### все хорошо, выключай debug / @include media( "+$size (+" ) ###");
+		}
+
+		@if ($media_sizes ) {
+			@media (max-width: ($media_sizes + px)) {
+				@content;
+			}
+		}
+
+		@else {
+			@media (max-width: (map.get($media_short, $size ) + px)) {
+				@content;
+			}
+		}
+
+	}
+
+	@else {
+		@debug "------------- что то пошло не так, включай debug / @include media( "+$size (+", debug ) -------------");
+	}
+
+}
