@@ -9,10 +9,30 @@
 
 <body>
   <main>
-    <section class="timer"></section>
+    <section class="timer">
+      <div class="wr">
+
+        <timer-view id="1" to-time="24:50:00" class="timer__time-left"></timer-view>
+        <timer-view seconds="630" class="timer__time-left"></timer-view>
+
+        <div class="timer__time-btns row">
+          <button class="btn btn_start">Старт</button>
+          <button class="btn btn_pause">Пауза</button>
+          <button class="btn btn_reset">Сброс</button>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
+<script>
+  const timer = document.getElementById('1')
+  setTimeout(() => {
+    timer.setAttribute('to-time', '23:50:00')
+  }, 5000)
+</script>
+
+<script type="module" src="assets/js/timer-view.min.js"></script>
 <script type="module" src="assets/js/main.min.js"></script>
 
 </html>

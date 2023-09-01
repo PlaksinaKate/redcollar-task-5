@@ -10,12 +10,20 @@ body {
   font-weight: normal;
   font-family: $ff;
   -webkit-tap-highlight-color: transparent;
+  display: flex;
+  margin: auto;
   /* overflow-x: hidden; */
 }
 
 body {
   position: relative;
   min-width: 320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh
 }
 
 img {

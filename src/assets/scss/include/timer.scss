@@ -1,0 +1,37 @@
+@import '../_vars.scss';
+
+.timer__time-left {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.timer__time-btns {
+  margin-top: 1.875rem;
+}
+
+.btn {
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: $purple;
+  background-color: unset;
+  border-radius: 20px;
+  border: 1px solid $purple;
+  padding: .625rem 2.5rem;
+  margin-right: .9375rem;
+  transition: all $as $ae;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-color: $white;
+    color: $white;
+  }
+
+  &:active {
+    opacity: .4;
+  }
+}
