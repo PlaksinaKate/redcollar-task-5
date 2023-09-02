@@ -1,12 +1,10 @@
 @import '../_vars.scss';
 
-.timer__time-left {
+timer-view {
+  display: block;
+  margin-bottom: 2.5rem;
   font-size: 5rem;
   text-align: center;
-}
-
-.timer__time-btns {
-  margin-top: 1.875rem;
 }
 
 .btn {
@@ -33,5 +31,29 @@
 
   &:active {
     opacity: .4;
+  }
+}
+
+.timer__dance-cat {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  transition: all $as $ae;
+  transform: scale(1);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &_hidden {
+    opacity: 0;
+    transform: scale(0.5);
+    visibility: hidden;
   }
 }

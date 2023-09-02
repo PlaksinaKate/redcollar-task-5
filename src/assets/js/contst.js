@@ -1,0 +1,5 @@
+export const TO_TIME_DATA = 'to-time'
+export const SECONDS_DATA = 'seconds'
+export const TIME_WR = 'timer__time-wr'
+export const DANCE_CAT = 'timer__dance-cat'
+export const DANCE_CAT_HIDDEN = 'timer__dance-cat_hidden'
