@@ -25,7 +25,7 @@
   <main>
     <section class="timer">
       <div class="wr">
-        <timer-view to-time="18:00:00"></timer-view>
+        <timer-view to-time="01:00:00"></timer-view>
         <timer-view seconds="10"></timer-view>
 
         <div class="timer__dance-cat timer__dance-cat_hidden">
@@ -35,6 +35,13 @@
     </section>
   </main>
 </body>
+
+<script>
+  setTimeout(() => {
+    const timer = document.getElementsByTagName('timer-view')[0]
+    timer.setAttribute('to-time', '02:00:00')
+  }, 10000)
+</script>
 
 <script type="module" src="assets/js/timer-view.min.js"></script>
 
