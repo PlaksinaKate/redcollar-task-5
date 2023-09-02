@@ -79,10 +79,8 @@ class MyTimer extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     let secondsLeft
     const timerWr = this.getElementsByClassName(TIME_WR)[0]
-    console.log(name)
     switch (name) {
       case "to-time":
-        console.log(timerWr)
         secondsLeft = this.getToTimeSeconds(newValue)
         if (timerWr) timerWr._shadow.innerHTML = this.renderTime(secondsLeft)
         break;
