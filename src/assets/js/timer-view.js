@@ -44,7 +44,7 @@ class MyTimer extends HTMLElement {
     this.addEventListener('starttimer', this.startTimer(this))
     this.addEventListener('pausetimer', this.pauseTimer(this))
     this.addEventListener('resettimer', this.resetTimer(this))
-    window.addEventListener('endtimer', () => this.endTimer())
+    window.addEventListener('endtimer', this.endTimer)
 
     btnStart.addEventListener('click', () => {
       this.dispatchEvent(this.events.start)
