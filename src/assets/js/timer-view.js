@@ -40,19 +40,21 @@ class MyTimer extends HTMLElement {
           btnStart = btnsWr.querySelector('.btn_start'),
           btnPause = btnsWr.querySelector('.btn_pause'),
           btnReset = btnsWr.querySelector('.btn_reset');
+    
+    this.addEventListener('starttimer', this.startTimer(this))
+    this.addEventListener('pausetimer', this.pauseTimer(this))
+    this.addEventListener('resettimer', this.resetTimer(this))
+    window.addEventListener('endtimer', () => this.endTimer())
 
     btnStart.addEventListener('click', () => {
-      this.addEventListener('starttimer', this.startTimer(this))
       this.dispatchEvent(this.events.start)
     })
-
+    
     btnPause.addEventListener('click', () => {
-      this.addEventListener('pausetimer', this.pauseTimer(this))
       this.dispatchEvent(this.events.pause)
     })
 
     btnReset.addEventListener('click', () => {
-      this.addEventListener('resettimer', this.resetTimer(this))
       this.dispatchEvent(this.events.reset)
     })
 
@@ -122,7 +124,7 @@ class MyTimer extends HTMLElement {
 
         if (timeSeconds === 0) {
           clearInterval(timer.interval)
-          timer.addEventListener('endtimer', timer.endTimer())
+          timer.dispatchEvent(this.events.end)
           return
         }
 
