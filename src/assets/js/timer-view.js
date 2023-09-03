@@ -96,7 +96,7 @@ class MyTimer extends HTMLElement {
   renderTime(value) {
     const date = new Date()
     const nowSeconds = date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
-    const nowSecondsLeft = value - nowSeconds
+    const nowSecondsLeft = Math.abs(value - nowSeconds)
     return this.secondsConverter(nowSecondsLeft);
   }
 
